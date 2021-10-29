@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste</title>
+</head>
+<body>
+        <!--Les listes:
+    listes non ordonnées: ul
+    listes ordonnées: ol
+    Ces listes prennet comme balises li qui signifie liste element
+    listes descriptives: dl
+la dl prend comme paramètre le dt pour descriptive title et dd pour descriptive definition -->
+    <ul type="square">
+        <li>Chocolate cake</li>
+        <li>Black Forest Cake</li>
+        <li>Pineapple cake</li>
+    </ul>
+    <ol type="square">
+        <li>Chocolate cake</li>
+        <li>Black Forest Cake</li>
+        <li>Pineapple cake</li>
+    </ol>
+    <!--On peut bien mettre une liste à l'intérieur d'une autre en décalant l'emplacemant de nos balises par tabulation-->
+    <ul type="square">
+        <li>Chocolate cake</li>
+            <ul type="disc">
+                <li>Dark Chocolat</li>
+                <li>Milk Chocolat</li>
+            </ul>
+        <li>Black Forest Cake</li>
+        <li>Pineapple cake</li>
+    </ul>
+    <ol type="square">
+        <li>Chocolate cake</li>
+            <ol type="a">
+                <li>Dark Chocolat</li>
+                <li>Milk Chocolat</li>
+            </ol>
+        <li>Black Forest Cake</li>
+        <li>Pineapple cake</li>
+    </ol>
+
+    <!--Ici pour le dl c'est une liste avec une description de chaque element de la liste-->
+    <!--le dt et le titre de l'element à mettre dans la liste
+    et le dd est la definition de ce même titre-->
+    <!--Question: Est-ce qu'on peut mettre plus qu'une seule définition par titre ?-->
+    <dl>
+        <dt>Bread</dt>
+        <dd>Food made of flour</dd>
+        <dt>Coffee</dt>
+        <dd>A drink made from roasted coffee beans</dd>
+    </dl>
+<!--Réponse: Oui-->
+    <dl>
+        <dt>Bread</dt>
+        <dd>Food made of flour</dd>
+        <dd>Or maybe from something else for the gluteen free community</dd>
+        <dt>Coffee</dt>
+        <dd>A drink made from roasted coffee beans</dd>
+    </dl>
+    <!--Les dl sont très pratique pour définire des termes scientifiques par exemple-->
+</body>
+</html>

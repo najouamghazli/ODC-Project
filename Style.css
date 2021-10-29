@@ -1,0 +1,73 @@
+/*Un commentaire sur css commence par /* et se ferme par l'inverse */
+:root {
+  --primary: red;
+  --font: cursive;
+}
+h2 {
+  color: var(--primary);
+  font-family: var(--font);
+}
+/*CSS contrairement à HTML il est sensible à la case */
+/* le selecteur universel * correspond à un selecteur qui s'applique tout au long du fichier html à l'exception des lignes contenant les même propriétés que celles précisées dans le selecteur universel */
+* {
+  /*box-sizing: border-box; -----border-box et content-box dans le cas où on a un élément fils dans un élément père, le scc prioritize le content-box ce qui fait
+    si on utilise le content-box pour l'élément fils la taille de cet élément peut sortir de la marge de l'élément parent, par contre si on utilise le border-box
+    l'élément fils ne sortira jamais de l'élément père et on aure toujours cette petite section à l'intérieur de la plus grande -----*/
+  /*padding: 0;
+  margin: 0;*/
+  font-family: Arial;
+}
+/*Le selecteur id n'est pas très souhaitable parce qu'il génère des erreurs, au lieu d'utiliser id il serait mieux d'utiliser les class (pour respecter l'unicité de l'id)*/
+/*Les classes sont à utiliser avec intelligence, si nous avonsplusieurs section avec la class .responsive et nous fixons le margin et padding pour toutes les section, une paragraphe sera agrandi 
+mais une image sera minimisé*/
+/*Si on met .bleu{color:blue;} toutes les sections qui contiennent la classe bleue seront modifiée mais si on met p.bleu{color:blue;} que les paragraphe ayant une classe bleue 
+seront modifié */
+.color {
+    color: magenta;
+  }
+  /*Le selecteur descendant*/
+  ol > li {
+      list-style: square;
+  }
+  ol > li ul {
+      list-style: none;
+  }
+/* Nous allons utiliser le + pour modifier le second element qui est au même niveau que le premier*/
+/* Si nous avons un p qui n'est pas au même niveau que le h1, il ne sera pas modifié, seulement les p qui sont au même niveau que le h1 seront modifié selon
+ce que nous avons précisé */
+  h1 + p {
+      color: blue;
+      font-size: 18px;
+  }
+  ul.task + p {
+    color: #f0f;
+    text-indent: 30px;
+  }
+/* le selecteur de frère + peut être remplacé par ~ qui fait exactement le même travail sauf que le tilde est général par contre le + est plus spécifique
+Ceci veut dire que si ont met h1 + p seulement le 1er paragraphe qui suit le h1 qui sera modifié, par contre si on met h1 ~ p tout les paragraphes quisuivent le h1
+et qui sont au même niveau que ce h1 seront modifié */
+/*background-image position: le (0,0) signifie le top left, le (100,100) signifie le bottom right, la position par défaut est le top left*/
+/*le background image se met au niveau du css et non pas au niveau de l'HTML*/
+/* On peut mettre background-repeat pour répéter le background autant de fois qu'on veut, soit x-repeat soit y-repeat soit no-repeat*/
+/*Le background contient plusieurs elements à savoir, color, image, repeat, attachement et position*/
+body{
+    background: url();
+}
+p.fontstyle{
+    font-style: normal;
+}
+p.fontstyle{
+    font-style: italic;
+}
+p.fontstyle{
+    font-style: oblique;
+}
+/* Taille de police: font-size prend comme valeur la taille de la police en px*/
+h1{
+    font-size: 24px;
+}
+p{
+    font-size: 14px;
+}
+/* L'unité um fait référence à la taille de l'élément parent, si on définit un font-size de 20px sur l'élément body, 1em=20px, 2em=40px 0.5em=10px*/
+/* Par défaut le font-size est de 16px, donc pour le remettre à 10px qui serait plus facile à utiliser et manipuler nous devons préciser le font-size à 62.5%*/

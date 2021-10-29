@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <!--La balise form permet de créer des formulaires-->
+    <!--le paramètre action nous permet de désigner où renvoyer le formulaire rempli-->
+    <!--Si on met l'input à l'interieur du lab ça permet à l'utilisateur de focuser le curseur sur le input box une fois il clique sur le "Username"
+    Si on met l'input après le label nous ne pouvons pas avoir le curseur dans la case si on tape sur "Username" et c'est ce qui est recommandé de faire-->
+    <form>
+        <label>Username: <input type="text"></label>
+        <label>Password: <input type="password"></label>
+        <input type="submit" value="Submit"> <!--la balise input c'est normalement pour la saisie de texte mais on peut l'utiliser comme boutton
+        si on utilise le type button. On peut remplacer input par button-->
+    </form>
+    <form>
+        <label for="Username">Username: </label>
+        <input type="text" name="username" id="username">
+    </form>
+    <!--Faire un boutton radio qui nous permet de choisi soit un choix soit l'autre mais pas les deux à la fois-->
+    <!--Dans les formulaire si on met le même nom pour le paramètre name nous n'allons recevoir dans le formulaire soumi qu'une seule
+    réponse à cette question (exemple de gender, si on met gender aussi pour male que pour female dans name nous allons recevoir
+    soit male soit female mais pas les deux)-->
+    <form>
+        <input type="radio" name="gender" id="male">
+        <label for="male" style="color: blue;">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female" style="color: pink;">Female</label>
+    </form>
+    <!--L'idée ici est de tester l'input à l'interieur du label, dans ce cas nous ne pouvons pas checker la box radio que si on
+    met le curseur directement sur le rond ce qui est un peu génant-->
+    <form>
+        <label for="male"><input type="radio" name="gender" id="male">Male</label>
+        <label for="female"><input type="radio" name="gender" id="female">Female</label>
+    </form>
+    <!--Le type de formulaire suivant nous permet d'avoir des box à checker à choix multiple, nous pouvons checker une ou
+    plusieurs box à la fois-->
+    <!--La même chaine de caractère que prend l'id doit être indiquée dans for du label
+    Dans le checkbox et le radio le même name doit être appliqué tout au long du formulaire avec le même type de choix-->
+    <form>
+        <input type="checkbox" name="sports" id="soccer">
+        <label for="soccer">Soccer</label>
+        <input type="checkbox" name="sports" id="cricket">
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" name="sports" id="baseball">
+        <label for="baseball">Baseball</label>
+    </form>
+    <form>
+        <label for="user-pwd">Password :</label>
+        <input type="password" name="user-password" id="user-pwd">
+    </form>
+    <!--Pour créer un boutton qui t'envoie vers un fichier local de l'ordinateur pour l'uploader-->
+    <form>
+        <label for="file-select">Upload</label>
+        <input type="file"  name="upload" id="file-select"> <!--Si on rajoute le paramètre multiple ça va nous permettre
+        de sélectionner plusieurs fichiers à la fois  <input type="file" multiple  name="upload" id="file-select">-->
+    </form>
+    <!--le for du label et le id du input doivent être exactement la même chose ce qui va nous permettre d'executer la même
+    action si on clique sur le nom afficher "Upload par exemple"-->
+
+    <form>
+        <label for="address">Address :</label>
+        <textarea role="3" cols="30" name="address" id="address">TestAddress</textarea>
+    </form>
+    <!--Zone de selection, c'est une liste déroulante avec des choix pré-établis qui nous permet de choisir un seul choix antre les 
+    différentes propositions-->
+    <form>
+        <label for="city">City</label>
+        <select name="city" id="city">
+            <option value=""></option>
+            <option value="sydney">Sydney</option>
+            <option value="melbourne" selected>Melbourne</option><!--le paramètre selected permet de choisir quelle option afficher
+            par défaut -->
+            <option value="cromwell">Cromwell</option>
+        </select>
+    </form>
+    <form action="action.php" method="post">
+        <label for="first-name">First Name</label>
+        <input type="text" name="first-name" id="first-name">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <!--le faite de créer un fieldset dans un form nous permet d'organiser notre formulaire en plusieurs petits bloques-->
+    <!--Chaque fieldset constitue un bloque-->
+    <!--Pour input on peut fixer par exemple pour le phone number le nombre de chiffre min et max à soumettre
+    en précisant minlength et maxlength-->
+    <!--Question: Comment faire le count down du nombre des caractères?-->
+    <form>
+        <fieldset>
+            <legend>Contact Details</legend>
+            <label>Email Address <input type="email" name="email"></label>
+            <label>Phone number <input type="text" name="phone" maxlength="15"></label>
+        </fieldset>
+    </form>
+    <!--header, footer, nav pour navigation, section pour des section, article généralement à l'interieur de la section
+    ça peut être un formulaire une table etc.., aside un contenu vaguement lié au contenu de la page (ex: les côtes contenant des détails moisn importants
+    dans la page), main regroupe l'essentiel de toute la page-->
+</body>
+</html>

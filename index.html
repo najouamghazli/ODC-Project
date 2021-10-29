@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Des extentions qui vont aider à faciliter le travail
+    auto rename tag : aide à utiliser les commanbde et les renommer
+    prettier : aide à organiser le fichier html
+    liveserver : aide à mettre à jour le lien directement sans pour autant actualiser la page web-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--L'attribut h1 est pour afficher le texte comme header 1  -->
+   <h1>Hello World</h1> 
+   <!--L'attribut h2 est pour afficher le texte comme header 2 ... On peut aller jusqu'à h6 -->
+   <h2>Hi World</h2>
+   <div>Hello World</div>
+      <!-- Ceci est un commentaire  -->
+   <img src="https://source.unsplash.com/random" alt="Random Image" width="200" height="200" />
+<!--L'attribut span est un élément de ligne qui permet d'afficher le texte sans retour à la ligne  -->
+    <span>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias esse illum. Ratione esse veritatis ipsum officiis distinctio dolorem id rerum quidem ducimus dicta mollitia earum, repellat similique quia sequi!
+    </span>
+    <!--L'attribut strong est un élément de ligne qui permet d'afficher le texte en gras  -->
+    <strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et distinctio id ut corrupti ducimus ullam aliquid dolorem similique libero dolorum consequatur impedit molestiae omnis inventore, facilis illo natus eius incidunt.
+    </strong>
+    <p>
+        <!--L'attribut code est un élément de ligne qui permet d'afficher le texte en police de code  -->
+        <code>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptatibus deserunt animi temporibus. Iste delectus facilis cum repellendus, ex sunt nisi ut nostrum molestiae soluta expedita recusandae quo quod incidunt?
+        </code>
+        <!--L'attribut button est un élément de ligne qui permet d'afficher le texte dans un boutton cliquable  -->
+        <button>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos accusantium, eius rem commodi, eaque cupiditate omnis libero laborum odio asperiores suscipit officia possimus deserunt, dolorem perspiciatis similique quae amet praesentium?
+        </button>
+    </p>
+<p>
+    <input>
+</p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ducimus magnam molestias vel voluptate id quod quidem aspernatur nulla consequuntur, iste veniam tempore aut distinctio fugiat libero neque? Corrupti, veniam?
+    </p>
+    <!--L'attribut b c'est pour le texte en gras  -->
+   <p>Here is some <b>bold</b> text.</p>
+   <!--L'attribut em c'est pour le texte en italic  -->
+   <p>Here is some <em>emphasized</em> text.</p>
+   <!--L'attribut mark c'est pour le texte en highlight  -->
+   <p>Here is some <mark>highlighted</mark> text.</p>
+   <!--L'attribut u c'est pour le texte souligné -->
+   <p>Here is some <u>underlined</u> text.</p>
+   <!--L'attribut small c'est pour le texte en plus petit  -->
+   <p>Here is some <small>small</small> text.</p>
+   <!--L'attribut strong c'est pour le texte en gras  -->
+   <p>Here is some <strong>strong</strong> text.</p>
+
+   <!--Les deux éléments suivants sont de type ligne ... le retour chariot ne se met pas automatiquement
+ces éléments peuvent être inclus dans des éléments de types block   -->
+<span>Hello World</span>
+<strong>Hello World</strong>
+
+<!--Les deux éléments suivants sont de type block ... le retour chariot se met automatiquement
+ces éléments ne peuvent pas être inclus dans des éléments de types ligne   -->
+<div>Hello World</div>
+<p>Hello World</p>
+<form>Hello World</form>
+<ol>Hello World</ol>
+
+
+<!--L'element image prend le paramètre src comme paramètre obligatoire le reste est optionnel
+alt c'est altérantif, au cas ou on n'arrive pas à montrer l'image on affiche le texte écrit dans alt  
+Pour le paramètre src soit on lui donne un lien vers l'image ou bien on lui donne le chemin vers l'image dans le local-->
+<img src="Images/cat.jpeg" width="30" height="30" alt="Random"/>
+<!--l'attribut a est pour le lien hyperText, il pren le paramètre href comme paramètre obligatoire le titre est 
+le texte à afficher qui contient le texte hypertexte   -->
+<a href="https://www.google.com/" title="Search Engine"> Google</a>
+<!--L'attribut abrr stands for abbreviation, il affiche le texte HTML, et quand on met le curseur
+sur le texte on peut voir l'abbréviation "Hyper Text Markup Language"   -->
+<abbr title="HyperText Markup Language"> HTML</abbr>
+<!--L'attribut input nous permet d'avoir une case où écrire un text, la valuer est le texte qui s'affiche
+    automatiquement dans la case input ... input de type texte permet d'introduire un texte   -->
+<input type="text" value="John Doe">
+<!--Idem ici qu'avant sauf que l'input est de type file, ce qui va nous permettre d'introduire un fichier ou une image 
+qu'on peut télécharger de notre ordinateur   -->
+<input type="file" value="img"/>
+
+<!--Les différents types que prend l'attribut input et leurs différentes caractéristique, est-ce que c'est obligatoire,
+désactivé, check ou bien lecture seule, etc...   -->
+<input type="email" required>
+<input type="submit" value="Submit" disabled>
+<input type="submit" value="Submit"> <!--Ici j'ai permet au bouton Submit de s'activer-->
+<input type="checkbox" checked>
+<input type="text" value="Read only text" readonly>
+<input type="password" password>
+<input type="time">
+<input type="week">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="number">
+<input type="search">
+
+<!-- Mettre Google comme lien hypertexte dans un boutton-->
+<!-- nous allons mettre l'élément ligne button à l'interieur de l'élément ligne lien pour faire ça-->
+<p>
+    <a href="http://www.google.com">
+    <button type="button" value="http://www.google.com"> Google </button>
+    </a>
+    
+</p>
+<!-- La valeur donner dans le pemaètre id ne doit pas se répliquer dans tout le document
+L'id peut s'utiliser une seule fois dans le doc html-->
+
+<input type="text" id="firstName"> <!-- l'id peut s'utiliser dans les élements de type ligne et de type block-->
+<!-- leparamètre classe contrairement à l'id peut être repeter dans plusieurs endroits dans le texte-->
+<input type="text" class="firstName"> 
+<div class="box highlight"> Some content </div>
+
+<p class="highlight"> This is a paragrpah</p>
+
+<abbr title="World Wide Web Consortium"> W3C</abbr>
+<!-- On peut mettre une attribut ligne à l'interieur d'un autre élément ligne
+Ici l'exemple d'une image cliquable nous renvoyant vers le lien de l'image-->
+<a href="https://source.unsplash.com/random" title="Click to view a larger image"`>
+    <img src="https://source.unsplash.com/random" alt="Random Image">
+</a>
+
+<!-- L'idée ici est de comprendre que l'attribut style nous permet de fixer des paramètre de style CSS, tel que la couleur,
+la police, la bordure etc-->
+<p style="color: blue;">This is a paragraph</p>
+<img src="https://source.unsplash.com/random" style="width: 300px;" alt="CDN Image">
+<div style="border: 1px solid red;">Some content</div>
+<p>
+    <h1 style="color: cadetblue;">
+        Heading level 1
+    </h1>
+    <h2>
+        Heading level 2
+    </h2>
+    <h3 style="background: chocolate;">
+        Heading level 3
+    </h3>
+    <h4>
+        Heading level 4
+    </h4>
+    <h5>
+        Heading level 5
+    </h5>
+    <h6>
+        Heading level 6
+    </h6>
+
+<!-- Juste pour rappeler que nous pouvons mettre des liens hypertexte soit en utilisant un texte cliquable ou une image cliquable-->    
+<a href="https://www.google.com" target="_blank">Google Search</a> <!-- on peut rajouter le paramètre target ce qui permet
+de préciser comment ouvrir le lien hypertexte, les options possibles sont: 
+_blank: pour l'ouvrir dans un nouvel onglet
+_parent: pour l'ouvrir dans la page parent
+_self: pour ouvrir le lien dans la même fenêtre
+_top: pour ouvrir le lien dans la fenêtre complète du navigateur
+-->
+    <a href="https://www.orangedigitalcenters.com" target="_parent">Orange Digital Center</a>
+    <div> 
+        <a href="Images/cat.jpeg">
+            <img src="Images/cat.jpeg" alt="Cat">
+        </a>
+    </div>
+</p>
+</html>

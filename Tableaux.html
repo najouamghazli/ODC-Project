@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <!--La balise table permet de créer des tables-->
+    <!--Cette balise prend comme paramètre border ce qui permet de définir en pixel la taille de la birdure souhaitée-->
+    <!--Pour les tables le tr représente une ligne et le th représente la cellule header alors que td représente le contenu
+    des cellules du corps du texte-->
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+    <table border="3">
+        <!--La balise tr permet de créer  de la table-->
+        <tr>
+            <!--La balise th permet de créer les éléments de la ligne header d'un tableau ... ceci permet de les écrire en gras-->
+            <th>No.</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+        <!--La balise td permet de créer les éléments des cellules d'un tableau-->
+            <td>1</td>
+            <td>Peter Parker</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Clark Kent</td>
+            <td>34</td>
+        </tr>
+    </table>
+    <!--Pour écrire ce même code en utilisant emet nous allons écrire tr*3 et puis tabulation
+    Après nous allons mettre th*3 tabulation et on insère à l'intérieur nos données
+    Puis nous allons mettre td*3 tabulation et on insère le contenu, pareil pour la dernière ligne-->
+
+    <table>
+        <!--La balise thead permet de différencier les headers du tableau-->
+        <thead>
+            <tr>
+                <th>Items</th>
+                <th>Expenditures</th>
+            </tr>
+        </thead>
+        <!--La balise tbody permet de différencier le contenu du tableau-->
+        <tbody>
+            <tr>
+                <td>Stationnary</td>
+                <td>2.000</td>
+            </tr>
+            <tr>
+                <td>Furniture</td>
+                <td>10.000</td>
+            </tr>
+        </tbody>
+        <!--La balise tfoot permet de différencier la dernière ligne du tableau-->
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td>12.000</td>
+            </tr>
+        </tfoot>
+        <!--Ces troisbalises prennent les mêmes paramètres que nous pouvons retrouver dans MDN references
+        Par exemple:  bgcolor="#094150" ou encore  align="center"-->
+        <!--le thead, tbody et tfoot permettent surtout aux robots de bien comprendre le contenu de notre tableau-->
+        <!--th défini les "indexes" des lignes ou des colonnes, dans ce cas les items et les Expenditures son t les indexes des
+        deux premières colonnes. Pareil pour Total qui représente l'indexe de la dernière ligne -->
+    </table>
+    <table border="2">
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Photo</th>
+        </tr>
+        <tr>
+            <td>Cat</td>
+            <td>18</td>
+            <!--On peut insérer des images/Photos dans un tableau en insérant la balise img à l'intérieur de la balise td-->
+            <td>
+                <img src="Images/cat.jpeg" alt="Cat" width="30cm" height="40cm"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Loupe</td>
+            <td>7</td>
+            <td>
+                <img src="Images/loupe.png" alt="Loupe" width="30cm" height="40cm"/>
+            </td>
+        </tr>
+    </table>
+    <!--Le spanning permet de fusionner des lignes ou des colonnes-->
+    <!--colspan permet de fuusionner deux ou plusieurs cellules en colonne
+    rawspan permet de fusionner deux ou plusieurs cellules en lignes-->
+    <table border="2" align="right">
+        <tr>
+            <th>Name</th>
+            <th colspan="3">Phone</th>
+        </tr>
+        <tr>
+            <td>John Carter</td>
+            <td>5550192</td>
+            <td>5550152</td>
+            <td>5550152</td>
+        </tr>
+    </table>
+    <!--Un exemple pour essayer le rowspan. Le tr qui suit celui au niveau duquel nous avons insérer le rawspan
+    ne doit pas contenir tout les th/td il doit avoir un nombre de th/td - le nombre du paramètre choisi dans le rowspan
+    Si on a choisi pour le rowspan 3 nous allons donc insérer -3 de td/th dans la tr suivante-->
+    <table align="center">
+        <tr>
+            <th>Name :</th>
+            <td>John Carter</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>48956769</td>
+        </tr>
+        <tr>
+            <td>46457567</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Check</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>15</td>
+            <td>XX</td>
+            <td>YY</td>
+            <td>ZZ</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>HH</td>
+            <td>HG</td>
+            <td>LL</td>
+            <td>05</td>
+        </tr>
+    </table>
+    <!--Exo-->
+    <table border="1" cellspacing="0" frame="lhs">
+        <!--Pour mettre un titre de la table,  nous allons utiliser l'attribut caption-->
+        <!--Ce tableau a été généré par emmet
+        thead puis tr puis th*4 etc...-->
+        <caption>Calcul de la moyenne</caption>
+        <thead>
+            <tr>
+                <th>Matières</th>
+                <th>Note par matière</th>
+                <th>Coefficient</th>
+                <th>Note*Coefficient</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mathématique</td>
+                <td>17</td>
+                <td>4</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <td>Physique</td>
+                <td>15</td>
+                <td>3</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>Informatique</td>
+                <td>16</td>
+                <td>2</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>9</td>
+                <td>145</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr style="color: blue;">
+                <td colspan="3">Moyenne</td>
+                <td>16.12</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+</body>
+</html>
